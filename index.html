@@ -3,210 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style>
-
-        #main{
-            width: 400px;
-            margin: 0 auto;
-        }
-        h3{
-            text-align: center;
-            color: red;
-            font-size: 25px;
-        }
-        input{
-            margin: 5px;
-            padding: 10px;
-            width: 60px;
-            font-size: 18px;
-        }
-        button{
-            background: red;
-            padding: 10px;
-            color: white;
-            font-size: 18px;
-            border-radius: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/file_css.css">
+    <!--    <style>-->
+<!--        .field {-->
+<!--            width: 350px;-->
+<!--        }-->
+<!--    </style>-->
 </head>
 <body>
-<div id="main">
-    <h3> kiểm tra cung hoàng đạo </h3>
-    <input type="text" id="ngayId" placeholder="ngày"/>
-    -
-    <input type="text" id="thangId" placeholder="tháng"/>
-    -
-    <input type="text" id="namId" placeholder="năm"/>
-
-    <button id="ketqua" onclick="kiemTraCungHoangDao()"> kết quả </button>
-</div>
-<script>
-    function kiemTraCungHoangDao(){
-        var ngay, thang, nam;
-        ngay=parseInt(document.getElementById("ngayId").value);
-        thang=parseInt(document.getElementById("thangId").value);
-        nam=parseInt(document.getElementById("namId").value);
-
-        if(nam>2022){
-            alert("bạn chưa ra đời");
-        }
-        else if(nam<0){
-            alert("nhập sai thông tin");
-        }
-
-        else{
-            switch(thang){
-                case 1:
-                    if( ngay<=19 && ngay>0){
-                        alert("bạn sinh ngày " +ngay+" tháng " +thang+" năm " +nam+ "\nbạn thuộc cung ma kết");
-                    }
-                    else if (ngay>19 && ngay <=31){
-                        alert("bạn sinh ngày " +ngay+" tháng " +thang+" năm " +nam+ "\nbạn thuộc cung bảo bình");
-                    }
-                    else{
-                        alert("không có ngày mà bạn nhập,\n bạn ngu vl");
-                    }break;
-
-
-                case 2:
-                    if(ngay<=18 && ngay >0){
-                        alert("bạn sinh ngày " +ngay+" tháng " +thang+" năm " +nam+ "\nbạn thuộc cung bảo bình");
-                    }
-                    else if(ngay>18 && ngay <=28){
-                        alert("bạn sinh ngày " +ngay+" tháng " +thang+" năm " +nam+ "\nbạn thuộc cung song ngư");
-                    }
-                    else{
-                        alert("không có ngày mà bạn nhập,\n bạn ngu vl");
-                    }break;
-
-
-                case 3:
-                    if(ngay<=20 && ngay >0){
-                        alert("bạn sinh ngày " +ngay+" tháng " +thang+" năm " +nam+ "\nbạn thuộc cung song ngư");
-                    }
-                    else if(ngay>20 && ngay <=31){
-                        alert("bạn sinh ngày " +ngay+" tháng " +thang+" năm " +nam+ "\nbạn thuộc cung bạch dương");
-                    }
-                    else{
-                        alert("không có ngày mà bạn nhập,\n bạn ngu vl");
-                    }break;
-
-
-                case 4:
-                    if(ngay<=19 && ngay >0){
-                        alert("bạn sinh ngày " +ngay+" tháng " +thang+" năm " +nam+ "\nbạn thuộc cung bạch dương");
-                    }
-                    else if(ngay>19 && ngay <=30){
-                        alert("bạn sinh ngày " +ngay+" tháng " +thang+" năm " +nam+ "\nbạn thuộc cung kim ngưu");
-                    }
-                    else{
-                        alert("không có ngày mà bạn nhập,\n bạn ngu vl");
-                    }break;
-
-                case 5:
-                    if(ngay<=20 && ngay >0){
-                        alert("bạn sinh ngày " +ngay+" tháng " +thang+" năm " +nam+ "\nbạn thuộc cung kim ngưu");
-                    }
-                    else if(ngay>20 && ngay <=31){
-                        alert("bạn sinh ngày " +ngay+" tháng " +thang+" năm " +nam+ "\nbạn thuộc cung song tử");
-                    }
-                    else{
-                        alert("không có ngày mà bạn nhập,\n bạn ngu vl");
-                    }break;
-
-
-                case 6:
-                    if(ngay<=21 && ngay >0){
-                        alert("bạn sinh ngày " +ngay+" tháng " +thang+" năm " +nam+ "\nbạn thuộc cung song tử");
-                    }
-                    else if(ngay>21 && ngay <=30){
-                        alert("bạn sinh ngày " +ngay+" tháng " +thang+" năm " +nam+ "\nbạn thuộc cung cự giải");
-                    }
-                    else{
-                        alert("không có ngày mà bạn nhập,\n bạn ngu vl");
-                    }break;
-
-
-                case 7:
-                    if(ngay<=22 && ngay >0){
-                        alert("bạn sinh ngày " +ngay+" tháng " +thang+" năm " +nam+ "\nbạn thuộc cung cự giải");
-                    }
-                    else if(ngay>22 && ngay<=31){
-                        alert("bạn sinh ngày " +ngay+" tháng " +thang+" năm " +nam+ "\nbạn thuộc cung sư tử");
-                    }
-                    else{
-                        alert("không có ngày mà bạn nhập,\n bạn ngu vl");
-                    }break;
-
-
-                case 8:
-                    if(ngay<=22&& ngay >0){
-                        alert("bạn sinh ngày " +ngay+" tháng " +thang+" năm " +nam+ "\nbạn thuộc cung sư tử");
-                    }
-                    else if(ngay>22 && ngay<=31){
-                        alert("bạn sinh ngày " +ngay+" tháng " +thang+" năm " +nam+ "\nbạn thuộc cung sử nữ");
-                    }
-                    else{
-                        alert("không có ngày mà bạn nhập,\n bạn ngu vl");
-                    }break;
-
-
-                case 9:
-                    if(ngay<=22 && ngay >0){
-                        alert("bạn sinh ngày " +ngay+" tháng " +thang+" năm " +nam+ "\nbạn thuộc cung sử nữ");
-                    }
-                    else if(ngay>22 && ngay <=30){
-                        alert("bạn sinh ngày " +ngay+" tháng " +thang+" năm " +nam+ "\nbạn thuộc cung thiên bình");
-                    }
-                    else{
-                        alert("không có ngày mà bạn nhập,\n bạn ngu vl");
-                    }break;
-
-
-                case 10:
-                    if(ngay<=23 && ngay>0){
-                        alert("bạn sinh ngày " +ngay+" tháng " +thang+" năm " +nam+ "\nbạn thuộc cung thiên bình");
-                    }
-                    else if(ngay>23&& ngay<=31){
-                        alert("bạn sinh ngày " +ngay+" tháng " +thang+" năm " +nam+ "\nbạn thuộc cung hổ cáp");
-                    }
-                    else{
-                        alert("không có ngày mà bạn nhập,\n bạn ngu vl");
-                    }break;
-
-
-                case 11:
-                    if(ngay<=21&& ngay>0){
-                        alert("bạn sinh ngày " +ngay+" tháng " +thang+" năm " +nam+ "\nbạn thuộc cung hổ cáp");
-                    }
-                    else if(ngay>21 && ngay <=30){
-                        alert("bạn sinh ngày " +ngay+" tháng " +thang+" năm " +nam+ "\nbạn thuộc cung nhân mã");
-                    }
-                    else{
-                        alert("không có ngày mà bạn nhập,\n bạn ngu vl");
-                    }break;
-
-
-                case 12:
-                    if(ngay<=21 && ngay >0){
-                        alert("bạn sinh ngày " +ngay+" tháng " +thang+" năm " +nam+ "\nbạn thuộc cung nhân mã");
-                    }
-                    else if(ngay>21 && ngay <=31){
-                        alert("bạn sinh ngày " +ngay+" tháng " +thang+" năm " +nam+ "\nbạn thuộc cung ma kết");
-                    }
-                    else{
-                        alert("không có ngày mà bạn nhập,\n bạn ngu vl");
-                    } break;
-
-
-                default:  alert("nhập sai thông tin");
-                    break;
-
-
-            }
-        }
-    }
-
-</script>
+<form  action="/profile.html" method="post"   >
+    <fieldset class="field">
+        <legend >Form NAME: </legend>
+        <label>Name: </label>
+        <input type="text" name="name"><br>
+        <label >Email: </label>
+        <input type="text" name="email"><br>
+        <label>Date of Birth</label>
+        <input type="date" name="birth"><br>
+       Password:
+        <input type="password" name="password"><br>
+        <button>PHIM BAM</button>
+        <input type="submit" value="Phim Bam" >
+        <input type="reset">
+        <input type="radio">
+        <input type="checkbox">
+    </fieldset>
+</form>
+<input type="button" onclick="alert('HELLO JV08')" value="CLICK ME!!">
 </body>
 </html>
